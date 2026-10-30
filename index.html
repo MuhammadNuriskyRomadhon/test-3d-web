@@ -1,0 +1,320 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AURUM — Creative Developer Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======================= 3D BACKGROUND ======================= -->
+  <canvas id="bg"></canvas>
+
+  <div class="page">
+
+    <!-- ======================= HEADER ======================= -->
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark"></span>
+          <span>AURUM<em>.</em></span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#stack">Stack</a>
+
+          <div class="dropdown" id="dropdown">
+            <button class="drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+              Explore
+              <svg class="chev" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2 4.5L6 8.5L10 4.5" stroke="currentColor" stroke-width="1.4"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="drop-menu" role="menu">
+              <a href="#play" role="menuitem">Arcade <small>Play</small></a>
+              <a href="#stack" role="menuitem">Capabilities <small>Table</small></a>
+              <a href="#work" role="menuitem">Selected Work <small>2024</small></a>
+              <a href="#contact" role="menuitem">Contact <small>Open</small></a>
+            </div>
+          </div>
+
+          <a class="btn btn-ghost" href="#contact">Let's talk</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" id="home">
+      <div class="wrap">
+        <p class="eyebrow reveal">Available for select projects — 2025</p>
+
+        <h1 class="display reveal">
+          Designing <span class="grad">digital gold</span><br />
+          for ambitious brands.
+        </h1>
+
+        <p class="lede reveal">
+          I craft immersive interfaces, real-time 3D experiences and meticulous
+          design systems — engineered for performance, finished with restraint.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-gold" href="#work">View the work</a>
+          <a class="btn btn-ghost" href="#play">Play the arcade ↓</a>
+        </div>
+
+        <!-- CARDS IN HEADER -->
+        <div class="hero-cards">
+          <article class="card glow-card reveal">
+            <div class="card-ico">◈</div>
+            <div class="card-num">48+</div>
+            <p class="card-label">Projects delivered</p>
+          </article>
+
+          <article class="card glow-card reveal">
+            <div class="card-ico">✦</div>
+            <div class="card-num">9 yrs</div>
+            <p class="card-label">Craft &amp; experience</p>
+          </article>
+
+          <article class="card glow-card reveal">
+            <div class="card-ico">◇</div>
+            <div class="card-num">60 fps</div>
+            <p class="card-label">Every single frame</p>
+          </article>
+
+          <article class="card glow-card reveal">
+            <div class="card-ico">⬡</div>
+            <div class="card-num">12</div>
+            <p class="card-label">Design awards</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr-gold" />
+
+    <!-- ======================= WORK ======================= -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 class="display">Objects of precision.</h2>
+          <p class="lede">
+            A short selection of products where motion, material and typography
+            were treated as one continuous system.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card glow-card project reveal">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>Nocturne — Luxury Commerce</h3>
+              <p>A headless storefront with WebGL product stages and sub-second navigation.</p>
+              <div class="project-tags">
+                <span class="tag">WebGL</span><span class="tag">Next.js</span><span class="tag">Motion</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card glow-card project reveal">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>Vault — Analytics Suite</h3>
+              <p>Dense data made legible: a dark-mode dashboard with 40+ composable widgets.</p>
+              <div class="project-tags">
+                <span class="tag">Design System</span><span class="tag">React</span><span class="tag">D3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card glow-card project reveal">
+            <div class="project-thumb"></div>
+            <div class="project-body">
+              <h3>Helios — Brand Engine</h3>
+              <p>A generative identity system that renders 10,000 unique brand artifacts.</p>
+              <div class="project-tags">
+                <span class="tag">Three.js</span><span class="tag">GLSL</span><span class="tag">Brand</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= TABLE ======================= -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2 class="display">The instrument panel.</h2>
+          <p class="lede">
+            A transparent look at where I operate — depth of craft, tooling and
+            current focus.
+          </p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Discipline</th>
+                  <th scope="col">Primary stack</th>
+                  <th scope="col">Focus</th>
+                  <th scope="col">Proficiency</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3D &amp; Real-time</td>
+                  <td>Three.js · GLSL · WebGPU</td>
+                  <td>Shader art, product stages</td>
+                  <td><div class="bar"><span style="--v:95%"></span></div></td>
+                  <td><span class="pill gold">Core</span></td>
+                </tr>
+                <tr>
+                  <td>Interface Engineering</td>
+                  <td>React · TypeScript · Vite</td>
+                  <td>Design systems, a11y</td>
+                  <td><div class="bar"><span style="--v:92%"></span></div></td>
+                  <td><span class="pill gold">Core</span></td>
+                </tr>
+                <tr>
+                  <td>Motion &amp; Interaction</td>
+                  <td>GSAP · CSS · Framer Motion</td>
+                  <td>Choreography, easing</td>
+                  <td><div class="bar"><span style="--v:88%"></span></div></td>
+                  <td><span class="pill">Active</span></td>
+                </tr>
+                <tr>
+                  <td>Backend &amp; Infra</td>
+                  <td>Node · Postgres · Edge</td>
+                  <td>APIs, caching, CI/CD</td>
+                  <td><div class="bar"><span style="--v:78%"></span></div></td>
+                  <td><span class="pill blue">Solid</span></td>
+                </tr>
+                <tr>
+                  <td>Brand &amp; Art Direction</td>
+                  <td>Figma · Blender · Type</td>
+                  <td>Identity, editorial</td>
+                  <td><div class="bar"><span style="--v:84%"></span></div></td>
+                  <td><span class="pill">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= GAME ======================= -->
+    <section class="section" id="play">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Arcade — 2D</p>
+          <h2 class="display">Aurum Collector.</h2>
+          <p class="lede">
+            A small playable study in feedback loops: collect the gold, dodge the
+            crimson. Rendered in 2D with Three.js, styled with CSS.
+          </p>
+        </div>
+
+        <div class="game-shell reveal">
+          <div class="game-stage" id="game-stage">
+            <canvas id="game-canvas"></canvas>
+
+            <div class="hud">
+              <div class="hud-row">
+                <div class="hud-chip">Score <b id="hud-score">0</b></div>
+                <div class="hud-chip">Best <b id="hud-best">0</b></div>
+              </div>
+              <div class="hud-row">
+                <div class="hud-chip">Combo <b id="hud-combo">x1</b></div>
+                <div class="hud-chip">Lives <b class="hud-lives" id="hud-lives">◆◆◆</b></div>
+              </div>
+            </div>
+
+            <div class="flash" id="flash"></div>
+
+            <div class="game-overlay" id="game-overlay">
+              <div>
+                <h3 id="overlay-title">Aurum Collector</h3>
+                <p id="overlay-text">
+                  Gather every golden orb. Avoid the crimson shards.
+                  Survive as long as your reflexes allow.
+                </p>
+                <div class="overlay-keys">
+                  <span class="kbd">Mouse / Touch</span>
+                  <span class="kbd">← →</span>
+                  <span class="kbd">A / D</span>
+                </div>
+                <button class="btn btn-gold btn-lg" id="game-start" type="button">Begin</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-legend">
+            <span><i class="dot gold"></i> Gold orb · +10</span>
+            <span><i class="dot red"></i> Crimson shard · −1 life</span>
+            <span>Combo multiplies score up to ×8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FOOTER / CTA ======================= -->
+    <footer class="footer" id="contact">
+      <div class="wrap">
+        <div class="cta reveal">
+          <p class="eyebrow">Let's build something rare</p>
+          <h2 class="display">Ready when you are.</h2>
+          <p class="lede">
+            Currently taking on two projects for the coming quarter.
+            Tell me what you're building — I'll reply within one business day.
+          </p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="mailto:hello@aurum.studio">Start a project</a>
+            <a class="btn btn-ghost btn-lg" href="#play">Play once more</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="year">2025</span> AURUM Studio — Crafted with Three.js.</span>
+          <div class="socials">
+            <a href="#work">Dribbble</a>
+            <a href="#work">GitHub</a>
+            <a href="#work">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
